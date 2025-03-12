@@ -1,5 +1,4 @@
-# Atividade de NLP
-- Aluna: Maria Eduarda Esteves Neves
+# NLP: Análise das Avaliações de um Produto
 
 # Links de acesso:
 - [Link para acesso ao Google Colab](https://colab.research.google.com/drive/1UaoAY0KLnk6zYhZ-G_AA91OjfFtz4OZ-?usp=sharing)
