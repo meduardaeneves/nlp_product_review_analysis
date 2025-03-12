@@ -66,40 +66,48 @@ Esta fase é importante para a normalização das avaliações, aplicação de t
 | 1    | Fica desligado toda hora sozinho não gostei. | fica desligado toda hora sozinho não gostei |
 
 
-## Desenvolvimento do Modelo
+## Desenvolvimento dos Modelos
+- Para analisar as avaliações do produto foram testados três modelos:
+ - SVM + BOW
+ - SVM + EMBEDDINGS
+ - BERT
+- SVM é "Máquina de Vetores de Suporte".
+
 ### SVM + BOW
-   - É uma representação baseada em pesos
-   - Não guarda a ordem dos elementos
-   - O dataframe vai ter em quantidade de colunas, o tamanho do vocabulário extraído
-   - Modelo utilizado:
-     - SVC: Support Vector Classifier
-   - Parâmetros utilizados com o auxílio do GridSearch:
-     - C: 100; gamma: 0.1; kernel: rbf
-     - Conjunto de teste representou 20%
+ - É uma representação baseada em pesos
+ - Não guarda a ordem dos elementos
+ - O dataframe vai ter em quantidade de colunas, o tamanho do vocabulário extraído
+ - Modelo utilizado:
+   - SVC: Support Vector Classifier
+ - Parâmetros utilizados com o auxílio do GridSearch:
+   - C: 100; gamma: 0.1; kernel: rbf
+   - Conjunto de teste representou 20%
 
 ### SVM + EMBEDDINGS
-   - É uma representação distribuída das palavras
-   - Cada unidade linguística vai ser representada por um vetor denso
-     - Tamanho do vetor escolhido: 75
-   - Utilizado o Word2Vec para gerar os vetores das palavras
-   - Foi feito uma padronização das frases, com zero padding, para que todas tivessem a mesma dimensão que aquela de maior dimensão (108)
-   - Modelo utilizado:
-     - SVC: Support Vector Classifier
-   - Parâmetros utilizados com o auxílio do GridSearch:
-     - C: 100; gamma: scale; kernel: linear
-     - Conjunto de teste representou 20%
+ - É uma representação distribuída das palavras
+ - Cada unidade linguística vai ser representada por um vetor denso
+   - Tamanho do vetor escolhido: 75
+ - Utilizado o Word2Vec para gerar os vetores das palavras
+ - Foi feito uma padronização das frases, com zero padding, para que todas tivessem a mesma dimensão que aquela de maior dimensão (108)
+ - Modelo utilizado:
+   - SVC: Support Vector Classifier
+ - Parâmetros utilizados com o auxílio do GridSearch:
+   - C: 100; gamma: scale; kernel: linear
+   - Conjunto de teste representou 20%
 
 ### BERT
-   - Tem a função de mapear a representação contextual bidirecional de toda a frase
-   - Ou seja, ele prevê palavras com base nas anteriores e nas seguintes
-   - Conjunto de dados foi dividido em três 
-     - Treinamento (0.70); Validação (0.20); Teste (0.10)
-   - Foi importado através do transformers
-   - BertTokenizer: Realiza a tokenização das palavras
-   - Modelo pré-treinado:
-     - BertForSequenceClassification.from_pretrained('neuralmind/bert-base-portuguese-cased’)
-     - 
+ - Tem a função de mapear a representação contextual bidirecional de toda a frase
+ - Ou seja, ele prevê palavras com base nas anteriores e nas seguintes
+ - Conjunto de dados foi dividido em três 
+   - Treinamento (0.70); Validação (0.20); Teste (0.10)
+ - Foi importado através do transformers
+ - BertTokenizer: Realiza a tokenização das palavras
+ - Modelo pré-treinado:
+   - BertForSequenceClassification.from_pretrained('neuralmind/bert-base-portuguese-cased’)
+
 # Resultados e Conclusão
+## Comparação entre os três modelos
+- A tabela abaixo compara os resultados obtidos em cada modelo
 
 | CLASSIFICADOR | ACC      | F1-MACRO | F1-AVG   |
 |---------------|----------|----------|----------|
@@ -107,12 +115,13 @@ Esta fase é importante para a normalização das avaliações, aplicação de t
 | EMBEDDINGS    | 0.657371 | 0.551792 | 0.653619 |
 | BERT          | 0.666667 | 0.402572 | 0.614899 |
 
- - Devido ao desbalanceamento das classes apresentadas, todos os três classificadores encontraram dificuldades devido à pouca quantidade de amostras apresentadas;
-   - Bert não conseguiu classificar elementos da classe “rate = 2”
- - Uma base de dados mais balanceada poderia trazer melhores resultados;
- - Nos três classificadores analisados, eles tiveram mais facilidade de identificar os casos extremos (maior e menor nota). 
-   - Isto pode ser devido ao fato deles terem maiores quantidades de amostras ou  por possuírem palavras fortes que ajudam em suas classificações;
- - Por fim, classificador que apresentou melhores resultados entre os três analisados foi o SVM + BOW
+# Conclusão
+- Devido ao desbalanceamento das classes apresentadas, todos os três classificadores encontraram dificuldades devido à pouca quantidade de amostras apresentadas;
+  - Bert não conseguiu classificar elementos da classe “rate = 2”
+- Uma base de dados mais balanceada, com mais amostras, poderia trazer melhores resultados;
+- Nos três classificadores analisados, eles tiveram mais facilidade de identificar os casos extremos (maior e menor nota). 
+  - Isto pode ser devido ao fato deles terem maiores quantidades de amostras ou  por possuírem palavras fortes que ajudam em suas classificações;
+- Por fim, classificador que apresentou melhores resultados entre os três analisados foi o SVM + BOW
 
 
 
