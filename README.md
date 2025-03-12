@@ -2,7 +2,7 @@
 - Aluna: Maria Eduarda Esteves Neves
 
 # Links de acesso:
-- [Link para visualização do vídeo, acesso ao Google Colab e apresentação PPT.](https://drive.google.com/drive/folders/1kaWydw6VNOdP61T2FkxFCTQPrtVABoTN?usp=sharing)
+- [Link para acesso ao Google Colab](https://colab.research.google.com/drive/1UaoAY0KLnk6zYhZ-G_AA91OjfFtz4OZ-?usp=sharing)
 
 # Objetivo e análise do banco de dados: 
 - Utilizar Fazer a análise de NLP para um determinado produto, neste caso o Tablet Mirage 7 Pol 64gb 4gb ram Quad core wi-fi cor Preto;
