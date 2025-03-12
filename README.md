@@ -40,7 +40,7 @@
 ## SVM + BOW
    - É uma representação baseada em pesos
    - Não guarda a ordem dos elementos
-   - O dataframe va ter em quantidade de colunas, o tamanho do vocabulário extraído
+   - O dataframe vai ter em quantidade de colunas, o tamanho do vocabulário extraído
    - Modelo utilizado:
      - SVC: Support Vector Classifier
    - Parâmetros utilizados com o auxílio do GridSearch:
