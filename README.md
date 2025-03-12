@@ -76,7 +76,7 @@
 |---------------|----------|----------|----------|
 | BOW           | 0.709163 | 0.589962 | 0.682820 |
 | EMBEDDINGS    | 0.657371 | 0.551792 | 0.653619 |
-| BERT          | 0.650794 | 0.434994 | 0.624807 |
+| BERT          | 0.666667 | 0.402572 | 0.614899 |
 
  - Devido ao desbalanceamento das classes apresentadas, todos os três classificadores encontraram dificuldades devido à pouca quantidade de amostras apresentadas;
    - Bert não conseguiu classificar elementos da classe “rate = 2”
