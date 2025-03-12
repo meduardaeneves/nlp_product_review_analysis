@@ -2,6 +2,8 @@
 
 # Links de acesso:
 - [Link para acesso ao Google Colab](https://colab.research.google.com/drive/1UaoAY0KLnk6zYhZ-G_AA91OjfFtz4OZ-?usp=sharing)
+- Arquivo ".ipynb" para rodar o projeto: projeto_NLP_meduarda_final.ipynb
+- [Link de acesso para o portfólio em Inglês](https://meduardaeneves.github.io/portfolio/personal-projects/nlp_product_review_analysis/)
 
 # Objetivo e análise do banco de dados: 
 - Utilizar Fazer a análise de NLP para um determinado produto, neste caso o Tablet Mirage 7 Pol 64gb 4gb ram Quad core wi-fi cor Preto;
