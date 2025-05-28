@@ -7,6 +7,7 @@
 
 # Objetivos do Projeto
 
+- O projeto foi desenvoldio durante a disciplina de `Processamento de Linguagem Natural com Deep Learning`, durante a Pós Graduação de Deep Learning
 - Utilizar Fazer a análise de NLP para um determinado produto, neste caso o Tablet Mirage 7 Pol 64gb 4gb ram Quad core wi-fi cor Preto;
 - O conjunto de dados foi obtido através da API do mercado livre.
 - Id do produto: MLB4241052396
