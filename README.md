@@ -4,6 +4,8 @@
 - [Link para acesso ao Google Colab](https://colab.research.google.com/drive/1UaoAY0KLnk6zYhZ-G_AA91OjfFtz4OZ-?usp=sharing)
 - Arquivo ".ipynb" para rodar o projeto: projeto_NLP_meduarda_final.ipynb
 - [Link de acesso para o portfólio em Inglês](https://meduardaeneves.github.io/portfolio/personal-projects/nlp_product_review_analysis/)
+- O projeto foi desenvoldio durante a disciplina de `Processamento de Linguagem Natural com Deep Learning`, durante a Pós Graduação de Deep Learning
+  - O arquvio de vídeo e a apresentação em PDF se encontram na pasta `files`
 
 # Objetivos do Projeto
 
